@@ -14,10 +14,10 @@ package our_interfaces;
 public class Main {
 
     public static void main(String[] args) {
-        Printable toConsole = Init.toConsole();
-        String strDelimiter = Init.delimiterLine();
-        String task = Init.task();
-        Incrementable incrementable = Init.incrementable();
+        Printable toConsole = Utils.toConsole();
+        String strDelimiter = Utils.delimiterLine();
+        String task = Utils.task();
+        Incrementable incrementable = Utils.incrementable();
 
         // 1. Конкатенировaть числа a  и  b
     // пример 1 и 2 -> 12
@@ -72,13 +72,13 @@ public class Main {
     Transformable wrapItUpInAnExclamation  = str -> "!".concat(str).concat("!");
 
     String strString6 = "string";
-    toConsole.print(strString6 + " -> " + wrapItUpInAnExclamation.modify(strString6));
+    toConsole.print(strString6 + " => " + wrapItUpInAnExclamation.modify(strString6));
 
         toConsole.print(strDelimiter + "End of "+ task + incrementable.inc());
 
     //7. возвращает  "Hello World"
     Productable strHelloWorld = () -> "Hello World";
-    toConsole.print("Hello World -> " + strHelloWorld.produce());
+    toConsole.print("Hello World => " + strHelloWorld.produce());
 
     toConsole.print(strDelimiter + "End of "+ task + incrementable.inc());
 

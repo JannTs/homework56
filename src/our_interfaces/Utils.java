@@ -1,5 +1,5 @@
 package our_interfaces;
-public class Init {
+public class Utils {
     public static Printable toConsole() {
         return str -> System.out.println(str);
     }
